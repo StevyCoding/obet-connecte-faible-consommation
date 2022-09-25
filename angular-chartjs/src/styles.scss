@@ -1,0 +1,18 @@
+
+  /* You can add global styles to this file, and also import other style files */
+.gauge-container > .gauge > .dial {
+    stroke: #000000;
+    stroke-width: 2;
+  }
+  .gauge-container > .gauge > .value {
+    stroke: rgb(14, 223, 255);
+    stroke-width: 2;
+  }
+  .gauge-container > .gauge > .value-text {
+    fill: rgb(47, 227, 255);
+    font-family: sans, 'sans-serif';
+    font-weight: bold;
+    font-size: 0.6em;
+  }
+
+

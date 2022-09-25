@@ -1,0 +1,6 @@
+ export class bm680 {
+    temperature: number;
+    humidity: number;
+    presssion: number;
+    heure : string;
+}
