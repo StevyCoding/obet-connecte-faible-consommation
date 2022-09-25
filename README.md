@@ -10,4 +10,23 @@ et télverser le code
 
 Il faut aussi configurer la connexion wifi avec celle du serveur associé.
 
-En respectant cela le code devrait fonctionner
+En respectant cela le code devrait fonctionner.
+
+## Serveur Nodejs
+
+dependance :
+
+```
+npm i express
+
+```
+
+```
+npm i express
+
+```
+```
+npm i cors
+```
+
+
