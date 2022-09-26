@@ -14,7 +14,7 @@ En respectant cela le code devrait fonctionner.
 
 ## Serveur Nodejs
 
-dependance :
+dependances :
 
 ```
 npm i express
@@ -61,11 +61,11 @@ app.listen(8080, function () {
 
 Comme on veut que le serveur reçoive des  requête sous la forme de json il est important d'utiliser un middleware qui lui permettra de supporter ce type de requête. body-parser extrait la totalité du corps d'une requête entrante et l'expose dans req.body.
 
-Le middlewarel faisait auparavant partie d'Express.js, mais il doit  désormais  être installer séparément.
+Le middleware faisait auparavant partie d'Express.js, mais il doit  désormais  être installer séparément.
 
 Ce module body-parser analyse les données codées JSON, buffer, string et URL soumises à l'aide d'une requête HTTP POST. il faut installer body-parser en utilisant NPM comme indiqué ci-dessous.
 
-une fois installer il faut l'importer et définir les paramètre dans app.use().
+une fois installer il faut l'importer et définir les paramètres dans app.use().
 
 ````js
 const bodyParser = require('body-parser');
@@ -107,7 +107,7 @@ app.use(cors());
 
 ```
 
-Une foit le serveur configurer il suffit de l'initialiser avec un 
+Une fois le serveur configuré il suffit de l'initialiser avec la commande 
 
 ``` 
 node filename.js 
