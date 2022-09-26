@@ -74,23 +74,7 @@ app.use(bodyParser.urlencoded({
     extended: true
   }));
 app.use(bodyParser.json());
-app.use(cors());
-//  creation de l'objet graph poiur stocker les information envoyé par l'alarme à incendie
-class Graph {
-    constructor() {
-        let date = new Date();
-        this.date = formatNumber(date.getDay()) + "/" + formatNumber(date.getMonth()) + "/" + date.getFullYear()
-        this.coordinateTemperature = [];
-        this.type;
-    }
-    initDate() {
 
-        let date = new Date();
-        this.date = formatNumber(date.getDay()) + "/" + formatNumber(date.getMonth()) + "/" + date.getFullYear()
-
-    }
-
-}
 ````
 
 ### CORS
