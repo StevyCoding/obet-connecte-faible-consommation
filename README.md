@@ -195,8 +195,11 @@ Exemple de construction  d'une jauge   :
 documentation :
 
 https://nodejs.org/en/docs/
+
 https://angular.io/docs
+
 https://www.chartjs.org/docs/latest/
+
 https://www.cssscript.com/animated-svg-gauge/
 
 
