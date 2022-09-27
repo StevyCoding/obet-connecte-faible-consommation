@@ -192,7 +192,12 @@ Exemple de construction  d'une jauge   :
       label: function(value: number) {return Math.round(avg) + "\n C°" ;} // returns a string label that will be rendered in the center
   });
 ```
-On démarre angula avec le code  
+documentation :
+
+https://nodejs.org/en/docs/
+https://angular.io/docs
+https://www.chartjs.org/docs/latest/
+https://www.cssscript.com/animated-svg-gauge/
 
 
 
