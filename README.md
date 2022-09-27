@@ -97,4 +97,102 @@ Une fois le serveur configuré il suffit de l'initialiser avec la commande
 node filename.js 
 ```
 
+# Client Angular 
+
+Angular est un framework d'application Web gratuit et open source basé sur TypeScript, dirigé par l'équipe Angular de Google et par une communauté d'individus et d'entreprises. Angular est une réécriture complète de la même équipe qui a construit AngularJS.
+
+pour démarer Angular il suffi d'utiliser la commande :
+
+```
+ng serve -o
+```
+
+
+Dans le dossier srx ->  app -> line-chart -> line-chart.component.ts  il ya le code typescript pour afficher le graphe d'humité de tmepérature  en fonction des heures de la journéee.
+
+il faut importer la lbibliothèque qui permet de faire des requêtes http 
+
+```ts
+import { HttpClient } from '@angular/common/http';
+```
+
+Pour faire un GET request  
+
+```ts
+this._httpClient.get<any>('http://127.0.0.1:8080').subscribe({
+      next: data => {
+        bm680 = data.bm680; // donnée récuperer
+        this.createChart();
+        this.createChartGaz();
+        this.createChartHumidite();
+      },
+      error: error => {
+
+      }
+    })
+
+```
+
+
+
+Exemple de construction d'un graphe
+
+
+```ts
+    var ctx = this.canvas.nativeElement.getContext('2d');
+    this.chart = new Chart(ctx, {
+      type: 'line', //this denotes tha type of chart
+
+      data: {// values on X-Axis
+        labels: label,
+        datasets: [
+          {
+            label: "temperature",
+            data: temperature,
+            backgroundColor: 'rgb(250,128,114)',
+            borderColor: 'rgb(250,128,114)',
+          },
+
+        ]
+      },
+      options: {
+        elements: {
+          point: {
+            radius: 0
+          }
+        }
+      }
+
+    });
+```
+
+Calcul de la moyenne  pour lla jauge
+```ts
+    const sum = temperature.reduce((a, b) => a + b, 0);
+    this.avgTemp = (sum / temperature.length) || 0;
+    var avg  =  this.avgTemp;
+```
+
+Exemple de construction  d'une jauge   :
+
+```ts
+   Gauge(document.getElementById("gauge-demo"),{
+      dialRadius: 40,
+      dialStartAngle: 135,
+      dialEndAngle: 45,
+      value: avg,
+      max: 100,
+      min: 0,
+      valueDialClass: "value",
+      valueClass: "value-text",
+      dialClass: "dial",
+      gaugeClass: "gauge",
+      showValue: true,
+      gaugeColor: null,
+      label: function(value: number) {return Math.round(avg) + "\n C°" ;} // returns a string label that will be rendered in the center
+  });
+```
+On démarre angula avec le code  
+
+
 
